@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+	package="com.epd.vanilla"
+	android:versionCode="1"
+	android:versionName="0.0.1 preview"
+	android:installLocation="auto">
+
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    
+	<uses-sdk 
+	    android:minSdkVersion="8"
+	    android:targetSdkVersion="23"/>
+	
+	<uses-feature 
+	    android:glEsVersion="0x00020000"/>
+	
+	<supports-screens 
+	    android:smallScreens="false"
+	    android:normalScreens="true"
+	    android:largeScreens="true"/>
+	    <!--android:xlargeScreens="true"-->
+
+	<application
+		android:icon="@drawable/ic_launcher"
+		android:label="Easier Vanilla PD"
+		android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen"
+		android:allowBackup="true">
+	    
+		<activity
+			android:label="Easier Vanilla PD"
+			android:name="com.epd.vanilla.PixelDungeon"
+			android:screenOrientation="portrait">
+			<intent-filter >
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.LAUNCHER" />
+			</intent-filter>
+		</activity>
+	</application>
+
+</manifest>
