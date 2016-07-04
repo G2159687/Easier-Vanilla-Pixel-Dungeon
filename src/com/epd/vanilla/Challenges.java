@@ -24,15 +24,17 @@ public class Challenges {
 
 	public static final int MOREHP			= 1;
 	public static final int NODEG			= 2;
+	public static final int INSID			= 4;
 
 	
 	public static final String[] NAMES = {
 		"More HP",
-		"No degradation"
+		"No degradation",
+		"Instant identify"
 		};
 	
 	public static final int[] MASKS = {
-		MOREHP,NODEG
+		MOREHP,NODEG,INSID
 	};
 	
 }

@@ -578,11 +578,11 @@ public class Hero extends Char {
 			if (heap != null) {				
 				Item item = heap.pickUp();
 				if (item.doPickUp( this )) {
-					
+
 					if (item instanceof Dewdrop) {
 						// Do nothing
 					} else {
-						boolean important = 
+						boolean important =
 							((item instanceof ScrollOfUpgrade || item instanceof ScrollOfEnchantment) && ((Scroll)item).isKnown()) ||
 							((item instanceof PotionOfStrength || item instanceof PotionOfMight) && ((Potion)item).isKnown());
 						if (important) {
@@ -590,8 +590,10 @@ public class Hero extends Char {
 						} else {
 							GLog.i( TXT_YOU_NOW_HAVE, item.name() );
 						}
-					}
-					
+						if (Dungeon.isChallenged(Challenges.INSID)){if (!item.isIdentified()){item.identify();}
+
+						}}
+
 					if (!heap.isEmpty()) {
 						GLog.i( TXT_SOMETHING_ELSE );
 					}
