@@ -47,8 +47,9 @@ public class WndItem extends Window {
 		titlebar.icon( new ItemSprite( item.image(), item.glowing() ) );
 		titlebar.label( Utils.capitalize( item.toString() ) );
 		if (item.isUpgradable() && item.levelKnown) {
-			titlebar.health( (float)item.durability() / item.maxDurability() );
-		}
+			if (item.durability() > 0)
+			{titlebar.health((float) item.durability() / item.maxDurability());}
+			else {titlebar.health((float) 0 / item.maxDurability());}}
 		titlebar.setRect( 0, 0, WIDTH, 0 );
 		add( titlebar );
 		

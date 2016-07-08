@@ -26,7 +26,10 @@ public class Challenges {
 	public static final int NODEG			= 2;
 	public static final int INSID			= 4;
 	public static final int HIGHSKILL      = 8;
-	public static final int CHSHOP          = 16;
+	public static final int CHSHOP         = 16;
+	public static final int C1              = 32;
+	public static final int C2              = 64;
+	public static final int C3              = 128;
 
 	
 	public static final String[] NAMES = {
@@ -34,11 +37,14 @@ public class Challenges {
 		"No degradation",
 		"Instant identify",
 		"Higher skills",
-		"Shops changed"
+		"Shops changed",
+		" ",
+		" ",
+		" ",
 		};
 	
 	public static final int[] MASKS = {
-		MOREHP,NODEG,INSID,HIGHSKILL,CHSHOP
+		MOREHP,NODEG,INSID,HIGHSKILL,CHSHOP,C1,C2,C3
 	};
 	
 }
