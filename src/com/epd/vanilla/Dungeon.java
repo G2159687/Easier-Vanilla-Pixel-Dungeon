@@ -242,7 +242,14 @@ public class Dungeon {
 	}
 	
 	public static boolean shopOnLevel() {
-		return depth == 6 || depth == 11 || depth == 16;
+		if (!Dungeon.isChallenged(Challenges.CHSHOP))
+	              { return depth == 6 || depth == 11 || depth == 16;}
+	        else { return depth == 1 || depth == 2 || depth == 3 || depth == 4 ||
+			    depth == 6 || depth == 7 || depth == 8 || depth == 9 ||
+			    depth == 11 || depth == 12 || depth == 13 || depth == 14 ||
+			    depth == 16 || depth == 17 || depth == 18 || depth == 19 ||
+			    depth == 22 || depth == 23 || depth == 24 ;}
+
 	}
 	
 	public static boolean bossLevel() {
@@ -323,7 +330,7 @@ public class Dungeon {
 	private static final String RN_DEPTH_FILE	= "ranger%d.dat";
 	
 	private static final String VERSION		= "version";
-	private static final String CHALLENGES	= "challenges";
+	private static final String CHALLENGES	= "easy mode";
 	private static final String HERO		= "hero";
 	private static final String GOLD		= "gold";
 	private static final String DEPTH		= "depth";

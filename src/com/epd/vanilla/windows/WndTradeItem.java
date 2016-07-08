@@ -20,6 +20,7 @@
  */
 package com.epd.vanilla.windows;
 
+import com.epd.vanilla.Challenges;
 import com.watabou.noosa.BitmapTextMultiline;
 import com.epd.vanilla.Dungeon;
 import com.epd.vanilla.actors.hero.Hero;
@@ -228,11 +229,13 @@ public class WndTradeItem extends Window {
 	
 	private int price( Item item ) {
 
-		int price = item.price() * 5 * (Dungeon.depth / 5 + 1);
-		if (Dungeon.hero.buff( RingOfHaggler.Haggling.class ) != null && price >= 2) {
-			price /= 2;
+		int price; if (!Dungeon.isChallenged(Challenges.CHSHOP)) {
+			return item.price() * 5 * (Dungeon.depth / 5 + 1);
 		}
-		return price;
+		else {
+			return 1;
+		}
+
 	}
 	
 	private void buy( Heap heap ) {

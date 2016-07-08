@@ -36,7 +36,7 @@ import com.epd.vanilla.ui.Window;
 public class WndGame extends Window {
 	
 	private static final String TXT_SETTINGS	= "Settings";
-	private static final String TXT_CHALLEGES	= "Challenges";
+	private static final String TXT_CHALLEGES	= "Easy Mode";
 	private static final String TXT_RANKINGS	= "Rankings";
 	private static final String TXT_START		= "Start New Game";
 	private static final String TXT_MENU		= "Main Menu";

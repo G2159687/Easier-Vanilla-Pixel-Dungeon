@@ -49,16 +49,9 @@ import com.epd.vanilla.actors.mobs.Mob;
 import com.epd.vanilla.effects.particles.FlowParticle;
 import com.epd.vanilla.effects.particles.WindParticle;
 import com.epd.vanilla.items.Generator;
-import com.epd.vanilla.items.Gold;
 import com.epd.vanilla.items.Heap;
 import com.epd.vanilla.items.Item;
-import com.epd.vanilla.items.armor.Armor;
-import com.epd.vanilla.items.bags.ScrollHolder;
-import com.epd.vanilla.items.bags.SeedPouch;
-import com.epd.vanilla.items.food.Food;
-import com.epd.vanilla.items.potions.PotionOfHealing;
 import com.epd.vanilla.items.potions.PotionOfStrength;
-import com.epd.vanilla.items.scrolls.Scroll;
 import com.epd.vanilla.items.scrolls.ScrollOfEnchantment;
 import com.epd.vanilla.items.scrolls.ScrollOfUpgrade;
 import com.epd.vanilla.levels.features.Chasm;
@@ -82,13 +75,13 @@ public abstract class Level implements Bundlable {
 		CHASM,
 		WATER,
 		GRASS
-	};
-	
+	}
+
 	public static final int WIDTH = 32;
 	public static final int HEIGHT = 32;
 	public static final int LENGTH = WIDTH * HEIGHT;
 	
-	public static final int[] NEIGHBOURS4 = {-WIDTH, +1, +WIDTH, -1}; 
+	public static final int[] NEIGHBOURS4 = {-WIDTH, +1, +WIDTH, -1};
 	public static final int[] NEIGHBOURS8 = {+1, -1, +WIDTH, -WIDTH, +1+WIDTH, +1-WIDTH, -1+WIDTH, -1-WIDTH};
 	public static final int[] NEIGHBOURS9 = {0, +1, -1, +WIDTH, -WIDTH, +1+WIDTH, +1-WIDTH, -1+WIDTH, -1-WIDTH};
 	
@@ -103,7 +96,7 @@ public abstract class Level implements Bundlable {
 	public boolean[] visited;
 	public boolean[] mapped;
 	
-	public int viewDistance =  8;
+	public int viewDistance = 8;
 	
 	public static boolean[] fieldOfView = new boolean[LENGTH];
 	
