@@ -373,14 +373,14 @@ public class Speck extends Image {
 			case WOOL:
 				scale.set( 1 - p );
 				break;
-				
-			case CHANGE:
-				am = (float)FloatMath.sqrt( (p < 0.5f ? p : 1 - p) * 2);
-				scale.y = (1 + p) * 0.5f;
-				scale.x = scale.y * FloatMath.cos( left * 15 );
-				break;
-				
-			case HEART:
+
+				case CHANGE:
+					angle = Random.Float( 360 );
+					speed.polar( (angle - 90) * PointF.G2R, Random.Float( 4, 12 ) );
+					lifespan = 1.5f;
+					break;
+
+				case HEART:
 				scale.set( 1 - p );
 				am = 1 - p * p;
 				break;
@@ -402,12 +402,12 @@ public class Speck extends Image {
 				am = (p < 0.5f ? p : 1 - p) * 2;
 				scale.set( p * 1.5f );
 				break;
-				
-			case COIN:
-				scale.x = FloatMath.cos( left * 5 );
-				rm = gm = bm = (Math.abs( scale.x ) + 1) * 0.5f;
-				am = p < 0.9f ? 1 : (1 - p) * 10;
-				break;
+
+				case COIN:
+					speed.polar( -PointF.PI * Random.Float( 0.3f, 0.7f ), Random.Float( 48, 96 ) );
+					acc.y = 256;
+					lifespan = -speed.y / acc.y * 2;
+					break;
 			}
 		}
 	}
