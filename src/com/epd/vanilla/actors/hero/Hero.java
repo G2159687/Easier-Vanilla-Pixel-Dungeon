@@ -140,8 +140,8 @@ public class Hero extends Char {
 	public HeroClass heroClass = HeroClass.ROGUE;
 	public HeroSubClass subClass = HeroSubClass.NONE;
 	
-	private int attackSkill =Dungeon.isChallenged( Challenges.HIGHSKILL ) ? 30: 10;
-	private int defenseSkill = Dungeon.isChallenged( Challenges.HIGHSKILL ) ? 15 : 5;
+	private int attackSkill =Dungeon.isChallenged( Challenges.HIGHSKILL ) ? 50: 10;
+	private int defenseSkill = Dungeon.isChallenged( Challenges.HIGHSKILL ) ? 40 : 5;
 	
 
 	public boolean ready = false;
