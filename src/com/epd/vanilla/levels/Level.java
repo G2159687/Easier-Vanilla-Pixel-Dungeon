@@ -156,6 +156,12 @@ public abstract class Level implements Bundlable {
 		
 		if (!Dungeon.bossLevel()) {
 			addItemToSpawn( Generator.random( Generator.Category.FOOD ) );
+
+			if (Dungeon.isChallenged(Challenges.C1)){
+				addItemToSpawn( new PotionOfStrength() );
+				addItemToSpawn( new ScrollOfUpgrade() );
+				addItemToSpawn( new ScrollOfEnchantment() );
+			}
 			if (Dungeon.posNeeded()) {
 				addItemToSpawn( new PotionOfStrength() );
 				Dungeon.potionOfStrength++;

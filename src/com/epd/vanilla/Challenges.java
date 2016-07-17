@@ -38,7 +38,7 @@ public class Challenges {
 		"Instant identify",
 		"Higher skills",
 		"Shops changed",
-		" ",
+		"Upgrade & strength",
 		" ",
 		" ",
 		};

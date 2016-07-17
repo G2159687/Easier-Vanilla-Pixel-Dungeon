@@ -271,7 +271,7 @@ public class Item implements Bundlable {
 		cursed = false;
 		cursedKnown = true;
 		
-		level++;
+		level++;if (Dungeon.isChallenged(Challenges.C1)){ level++;}
 		fix();
 		
 		return this;
