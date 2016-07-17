@@ -241,7 +241,7 @@ public class WndTradeItem extends Window {
 	private void buy( Heap heap ) {
 		
 		Hero hero = Dungeon.hero;
-		Item item = heap.pickUp();
+		Item item = heap.pickUp();if (Dungeon.isChallenged(Challenges.INSID)){if (!item.isIdentified()){item.identify();}}
 		
 		int price = price( item );
 		Dungeon.gold -= price;
