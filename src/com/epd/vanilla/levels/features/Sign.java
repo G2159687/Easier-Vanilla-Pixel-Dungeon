@@ -37,7 +37,8 @@ public class Sign {
 		"What are you doing here?!";
 	
 	private static final String[] TIPS = {
-		"Don't overestimate your strength, use weapons and armor you can handle.",
+		"Welcome to EVPD!" +" This mod added options to make the game easier. Check them out at the center button of hero choosing scene! "
+		 + "Please contact reddit.com/u/g2159687 if you have any questions!",
 		"Not all doors in the dungeon are visible at first sight. If you are stuck, search for hidden doors.",
 		"Remember, that raising your strength is not the only way to access better equipment. You can go " +
 			"the other way, lowering its strength requirement with Scrolls of Upgrade.",

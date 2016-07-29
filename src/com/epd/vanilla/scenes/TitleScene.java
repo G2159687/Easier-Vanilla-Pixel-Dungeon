@@ -145,7 +145,7 @@ public class TitleScene extends PixelScene {
 		source.y = h - source.height();
 		add( source );
 
-		BitmapText ver = new BitmapText( "Easier VPD pre", font1x );
+		BitmapText ver = new BitmapText( "0.0.2", font1x );
 		ver.measure();
 		ver.hardlight( 0x888888 );
 		ver.x = w - ver.width();
