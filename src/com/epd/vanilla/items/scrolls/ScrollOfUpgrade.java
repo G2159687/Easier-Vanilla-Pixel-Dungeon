@@ -21,6 +21,7 @@
 package com.epd.vanilla.items.scrolls;
 
 import com.epd.vanilla.Badges;
+import com.epd.vanilla.Challenges;
 import com.epd.vanilla.Dungeon;
 import com.epd.vanilla.actors.hero.Hero;
 import com.epd.vanilla.effects.Speck;
@@ -45,7 +46,7 @@ public class ScrollOfUpgrade extends InventoryScroll {
 		if (item.isBroken()) {
 			item.fix();
 		} else {
-			item.upgrade();
+			item.upgrade();if (Dungeon.isChallenged(Challenges.C1)){ item.upgrade();}
 		}
 		
 		upgrade( curUser );
